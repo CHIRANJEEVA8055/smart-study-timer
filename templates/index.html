@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Study Timer</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f4f4f4; }
+        h1 { margin-top: 20px; }
+        video, img { border: 5px solid #555; border-radius: 12px; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>SMART STUDY TIMER</h1>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    <h2 id="timer">Study Time: 00:00:00</h2>
+    <button onclick="saveTime()">Save Time</button>
+
+    <script>
+        function updateTime() {
+            fetch('/get_time')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('timer').innerText = 'Study Time: ' + data.time;
+                });
+        }
+
+        function saveTime() {
+            fetch('/save')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) alert("Time saved to CSV!");
+                });
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+<footer style="margin-top: 40px; color: gray;">
+    Created by A. VIVEKANANDA
+</footer>
+
+</body>
+</html>
