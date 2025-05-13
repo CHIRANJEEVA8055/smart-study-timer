@@ -6,12 +6,12 @@
         body { color: rgb(0, 204, 255); font-family: 'Times New Roman', Times, serif; text-align: center; background: #003745; }
         h1 {font-weight: bold; font-size: 45px; margin-top: 20px; color: rgb(208, 122, 0); text-shadow: 1px 0.4px 1px rgb(208, 155, 79, 0.799), 1px 0.5px 1px rgb(208, 155, 79, 0.799), 1px 0.6px 1px rgb(208, 155, 79, 0.799), 1px 0.7px 1px rgb(208, 155, 79, 0.799), 1px 0.8px 1px rgb(208, 155, 79, 0.799), 1px 0.9px 1px rgb(208, 155, 79, 0.799), 1px 1px 1px rgb(208, 155, 79, 0.799), 1px 1.1px 1px rgb(208, 155, 79, 0.799), 1px 1.2px 1px rgb(208, 155, 79, 0.799), 1px 1.3px 1px rgb(208, 155, 79, 0.799), 1px 1.4px 1px rgb(208, 155, 79, 0.799), 1px 1.5px 1px rgba(208, 154, 79, 0.799), 1px 10px 25px rgba(12, 0, 0, 0.4); }
         h2{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;}
-        video, img { border: 5px solid #00635d; border-radius: 12px; margin-top: 20px; }
-        button {font-family: 'Times New Roman', Times, serif; color: rgb(224, 238, 255); padding: 10px 20px; font-size: 16px; margin-top: 20px; background-color: #001c2d; box-shadow: 1px 10px 25px rgba(12, 0, 0, 0.267); }
+        video, img { background: #175362; border: 2px solid #00635d; border-radius: 12px; border-style: double; margin-top: 20px; box-shadow:  3px 15px 30px rgba(12, 0, 0, 0.786); }
+        button {font-family: 'Times New Roman', Times, serif; color: rgb(224, 238, 255); padding: 10px 20px; font-size: 16px; margin-top: 20px; background-color: #001c2d; box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.356); }
     </style>
 </head>
 <body>
-    <h1>SMART STUDY TIMER</h1>
+    <h1>-SMART STUDY TIMER-</h1>
     <img src="{{ url_for('video_feed') }}" width="640" height="480">
     <h2 id="timer">Study Time: 00:00:00</h2>
     <button onclick="saveTime()">Save Time</button>
@@ -35,7 +35,7 @@
 
         setInterval(updateTime, 1000);
     </script>
-<footer style="margin-top: 40px; color: rgb(220, 150, 0);">
+<footer style="margin-top: 20px; color: rgba(180, 123, 0, 0.748); font-size: x-small;">
     Created by A. VIVEKANANDA
 </footer>
 
